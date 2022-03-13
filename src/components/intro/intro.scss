@@ -1,0 +1,108 @@
+@import "../../global.scss";
+
+#intro {
+    background-color: white;
+
+    .wrapper {
+        display: flex;
+        overflow: hidden;
+
+        @include mobile {
+            flex-direction: column;
+            margin-top: 100px;
+        }
+        .left {
+            flex:  0.5;
+            height: 600px;
+            overflow: hidden;
+
+            img {
+               height: 90%;
+               margin: 30px auto;
+               border-radius: 50% ;
+               background-color: lightcoral;
+               
+               @include mobile {
+                   width: 300px;
+                   height: 300px;
+                   margin: auto;
+                   display: block;
+               }
+
+               
+            }
+        }
+
+        .right {
+            flex: 0.5;
+            position: relative;
+            overflow-y: hidden;
+            .textGroup {
+                margin: 150px 30px;
+                @include mobile {
+                    margin: 20px 30px;
+                }
+
+                h1{
+                    font-size: 60px;
+                    margin-bottom: 20px;
+
+                    @include mobile {
+                        font-size: 40px;
+                        margin-bottom: 10px;
+                    }
+                }
+                h2{
+                    font-size: 40px;
+                    margin-bottom: 30px;
+
+                    @include mobile {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+                h3{
+                    font-size: 35px;
+                    @include mobile {
+                        font-size: 25px;
+                    }
+                    span{
+                        color: crimson;
+                    }
+                    .ityped-cursor{
+                        animation: blink 0.3s infinite;
+                    }
+                    @keyframes blink {
+                        50%{
+                            opacity: 1;
+                        }
+                        100%{
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+
+            a {
+                position: relative;
+                bottom: 130px;
+                left : 200px;
+                img{
+                    width: 30px;
+                    height: 50px;
+                    animation: arrowblink 2s linear infinite;
+
+                    @include mobile {
+                        display: none;
+                    }
+                }
+                @keyframes arrowblink {
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+            
+        }
+    }
+}

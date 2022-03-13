@@ -1,0 +1,116 @@
+@import "../../global.scss";
+
+#work {
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow {
+        height: 70px;
+        position: absolute;
+        @include mobile {
+            display: none;
+        }
+        &.left {
+            top: 45% ;
+            left: 100px;
+            transform: rotate(180deg);
+        }
+
+        &.right {
+            top: 45% ;
+            right: 100px;
+        }
+      }
+    .slider {
+        display: flex;
+        height: 350px;
+        position: absolute;
+        left: 0;
+
+        @include mobile {
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+        .container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s ease-out;
+            
+            .item{
+                width: 700px;
+                height: 100%;
+                background-color: white;
+                border-radius:  20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                @include mobile {
+                    width: 300px;
+                    height: 200px;
+                }
+
+                .left {
+                    flex: 4;
+                    height: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .leftContainer {
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .imageContainer{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: rgb(235, 183, 164);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                width: 25px;
+                            }
+                        }
+                        h3{
+                            font-size: 20px;
+                        }
+                        p{
+                            font-size: 13px;
+                            @include mobile {
+                                display: none;
+                            }
+                        }
+                        span{
+                            font-size: 12px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .right {
+                    flex: 8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    img{
+                        width: 400px;
+                        transform: rotate(-10deg)
+                    }
+                }
+            }
+        }
+    }
+    
+}

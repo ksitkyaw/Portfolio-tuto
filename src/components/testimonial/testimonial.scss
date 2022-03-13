@@ -1,0 +1,121 @@
+@import "../../global.scss";
+#testimonial  {
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h1{
+        font-size: 50px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 80% ;
+        @include mobile {
+            flex-direction: column;
+            height: 90%;       
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            width: 250px ;
+            height: 70% ;
+            padding: 20px;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 0 15px -8px black;
+            border-radius: 10px;
+            margin: 0 15px;
+            transition: all 1s ease;
+
+            @include mobile {
+                margin-bottom: 15px;
+                width:200px;
+                height: 30%;
+                padding: 10px;
+            }
+
+            &.featured {
+                width: 265px;
+                height: 75%;
+                @include mobile {
+                    width: 210px;
+                    height: 40%
+                }
+            }
+
+            &:hover {
+                transform: scale(1.1); 
+            }
+            
+
+            .imgContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70px;
+                @include mobile {
+                    height: 30px;
+                }
+
+                .sideimg{
+                    width: 25px;
+                    height: 40%;
+                    margin: 0 30px;
+                    @include mobile {
+                        width: 15px;
+                    }
+                }
+                .middleimgContainer {
+                    width: 60px;
+                    height: 80%;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .middleimg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        @include mobile {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+            p{
+                padding: 10px;
+                width: 90%;
+                background-color: rgba(248, 194, 174, 0.4);
+                @include mobile {
+                    font-size: 12px;
+                    width: 100%;
+                }
+            }
+            .textContainer {
+                h5{
+                    text-align: center;
+                    font-size: 17px;
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+                span{
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: rgb(143, 141, 141);
+                    @include mobile {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
