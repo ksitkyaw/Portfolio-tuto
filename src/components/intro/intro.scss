@@ -18,7 +18,7 @@
 
             img {
                 display: block;
-                height: 90%;
+                height: 80%;
                 margin: 30px auto;
                 border-radius: 50% ;
                 background-color: lightcoral;
@@ -38,10 +38,15 @@
             flex: 0.5;
             position: relative;
             overflow-y: hidden;
+            @include mobile {
+
+                flex: 0;
+            }
             .textGroup {
                 margin: 150px 30px;
                 @include mobile {
-                    margin: 20px 30px;
+                    margin: 30px ;
+                    text-align: center;
                 }
 
                 h1{
