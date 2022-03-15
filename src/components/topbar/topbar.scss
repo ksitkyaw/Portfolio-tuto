@@ -28,6 +28,10 @@
                 text-decoration: none;
                 margin-right: 30px;
                 color: inherit;
+
+                @include mobile {
+                    color: white;
+                }
             }
             .itemContainer {
                 margin-right: 20px;
@@ -69,6 +73,9 @@
     &.active {
         background-color: $mainColor;           //this is topbar with two className
         color: white;
+        .logo {
+            color: white;
+        }
 
         .humburger {
             span{                               //same span as above but this style won't be available unless topbar

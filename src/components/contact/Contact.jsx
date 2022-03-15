@@ -1,8 +1,8 @@
 import "./contact.scss"
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Contact() {
-  const [inputMail, setInputMail] = useState('ironman@example.com')
+  const [inputMail, setInputMail] = useState('ironman.genius@gmail.com')
   const [textarea, setTextarea] = useState("hi! I want to hire you")
   const [send, setSend] = useState(false);
 
@@ -14,13 +14,13 @@ export default function Contact() {
     }, 3000);
     return () => clearTimeout(timer);
   }, [send]);
- 
+
   {/*the handleSubmit function is executed when form submitting and it set some state to be true which will lead
   to show the hidden text */}
   const handleSubmit = (e) => {
     e.preventDefault();
     setSend(!send);
-  } 
+  }
 
   {/*Contact section include two parts the left is just an image and the right is Contact form consisting of 
   email input and textarea input and a button but there also is a hidden text which will only be showned when 
@@ -39,8 +39,8 @@ export default function Contact() {
               <textarea className='textarea' value={textarea} onChange={(e) => setTextarea(e.target.value)}></textarea>
               <button className='button' type='submit'>Send</button>
             </form>
-            {send && 
-              <p className='thank'>Thanks a lot.I will get back to you very soon.</p>
+            {send &&
+              <p className='thank'>Thanks a lot.But I'm too rich to work for you.</p>
             }
           </div>
         </div>
