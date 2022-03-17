@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Portfolio-tuto/static/css/main.4a610a53.css",
+    "main.js": "/Portfolio-tuto/static/js/main.65a1dbdf.js",
+    "index.html": "/Portfolio-tuto/index.html",
+    "main.4a610a53.css.map": "/Portfolio-tuto/static/css/main.4a610a53.css.map",
+    "main.65a1dbdf.js.map": "/Portfolio-tuto/static/js/main.65a1dbdf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a610a53.css",
+    "static/js/main.65a1dbdf.js"
+  ]
+}
